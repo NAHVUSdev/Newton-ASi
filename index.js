@@ -15,11 +15,7 @@ app.get('/reviews', function (req, res) {
 
 app.get('/reviews/:name', function (req, res, next) {
   var options = {
-    root: path.join(__dirname, 'app/reviews'),
-    headers: {
-      'x-timestamp': Date.now(),
-      'x-sent': true
-    }
+    root: path.join(__dirname, 'app/reviews')
   }
 
   var fileName = req.params.name
